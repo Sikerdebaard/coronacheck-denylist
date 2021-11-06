@@ -1,0 +1,3 @@
+coronacheck-tools
+seaborn
+pandas
