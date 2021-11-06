@@ -26,7 +26,7 @@ denylist = {'international': decode_denylist(ehc_denylist), 'national': decode_d
 with open(outdir / f'{today}-denylist.json', 'w') as fh:
     json.dump(denylist, fh)
 
-denylist_file = outdir / 'denylist.csv'
+denylist_file = outdir / 'latest-denylist.csv'
 denylist_today_file = outdir / f'{today}-denylist.csv'
 
 if Path(outdir / 'denylist.csv').exists():
