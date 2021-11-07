@@ -3,13 +3,14 @@ import json
 import base64
 import seaborn as sns
 import matplotlib.pyplot as plt
+import pytz
 
 from coronacheck_tools.verification.verifier import readconfig, cconfig
 from pathlib import Path
 from datetime import date
 
-
-today = str(date.today())
+tz = pytz.timezone('Europe/Amsterdam')
+today = str(date.today(tz))
 outdir = Path('data/')
 
 def decode_denylist(denylist):

@@ -1,3 +1,4 @@
 coronacheck-tools
 seaborn
 pandas
+pytz
