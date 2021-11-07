@@ -29,8 +29,8 @@ with open(outdir / f'{today}-denylist.json', 'w') as fh:
 denylist_file = outdir / 'latest-denylist.csv'
 denylist_today_file = outdir / f'{today}-denylist.csv'
 
-if Path(outdir / 'denylist.csv').exists():
-    df_denylist = pd.read_csv(outdir / 'denylist.csv', index_col=0)
+if denylist_file.exists():
+    df_denylist = pd.read_csv(denylist_file, index_col=0)
     df_denylist.index = pd.to_datetime(df_denylist.index)
 else:
     df_denylist = pd.DataFrame(index=pd.to_datetime([]))
