@@ -7,10 +7,10 @@ import pytz
 
 from coronacheck_tools.verification.verifier import readconfig, cconfig
 from pathlib import Path
-from datetime import date
+from datetime import datetime
 
 tz = pytz.timezone('Europe/Amsterdam')
-today = str(date.today(tz))
+today = str(datetime.now(tz).date())
 outdir = Path('data/')
 
 def decode_denylist(denylist):
